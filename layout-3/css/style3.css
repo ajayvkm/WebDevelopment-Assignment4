@@ -1,0 +1,75 @@
+main {
+    margin: 0;
+    font-family: sans-serif;
+    width: 960px;
+    grid-gap: 16px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 80px 360px 50px 150px 150px 50px;
+    grid-template-areas:
+        "imglogo .    navMenu navMenu"
+        "header header header header"
+        "title .    title2 ."
+        "blog1 blog1 prod1 prod2"
+        "blog2 blog2 prod3 prod4"
+        "footer footer footer footer";
+}
+div, nav ul, header, h1, section, footer, a {
+    background: silver;
+ }
+a {
+    color: black;
+    text-decoration: none;
+}
+h1 {
+    font-size: 2.8rem;
+}
+div:nth-of-type(1) {
+    grid-area: imglogo;
+}
+nav {
+    grid-area: navMenu;
+    align-self: center;
+}
+nav ul {
+    list-style-type: none;
+    display: grid;
+    height: 50px;
+    grid-template: auto / repeat(4, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-content: center;
+}
+header {
+    grid-area: header;
+    padding: 50px;
+}
+div:nth-of-type(2) {
+    grid-area: title;
+}
+div:nth-of-type(3) {
+    grid-area: title2;
+}
+#blog1 {
+    grid-area: blog1;
+}
+#product1 {
+    grid-area: prod1;
+}
+#product2 {
+    grid-area: prod2;
+}
+#blog2 {
+    grid-area: blog2;
+}
+#product3 {
+    grid-area: prod3;
+}
+#product4 {
+    grid-area: prod4;
+}
+footer {
+    grid-area: footer;
+    text-align: center;
+}
